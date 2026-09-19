@@ -1,0 +1,17 @@
+# Java
+target/
+*.class
+
+# Node
+node_modules/
+dist/
+.angular/
+
+# Entorno
+.env
+*.local
+
+# Editores
+.idea/
+.vscode/
+*.iml
