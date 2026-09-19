@@ -69,7 +69,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.modulith</groupId>
-			<artifactId>spring-modulith-starter-jpa</artifactId>
+			<artifactId>spring-modulith-starter-jdbc</artifactId>
 		</dependency>
 
 		<dependency>
@@ -150,11 +150,6 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.modulith</groupId>
-			<artifactId>spring-modulith-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.modulith</groupId>
 			<artifactId>spring-modulith-docs</artifactId>
 			<scope>test</scope>
 		</dependency>
@@ -176,6 +171,15 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.flywaydb</groupId>
+				<artifactId>flyway-maven-plugin</artifactId>
+				<configuration>
+					<url>jdbc:postgresql://127.0.0.1:5432/safework</url>
+					<user>safework</user>
+					<password>safework</password>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
